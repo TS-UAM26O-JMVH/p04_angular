@@ -35,6 +35,7 @@ Implementar el proceso completo de registro de usuarios mediante formularios rea
 4. Configurar la navegación completa de rutas en app.routes.ts.
 ---
 ## 🏗️ Arquitectura y Estructurasrc/
+```texto
 └── app/
     ├── componentes/
     │   ├── registro/    # Vista principal del flujo con barra de progreso
@@ -49,6 +50,7 @@ Implementar el proceso completo de registro de usuarios mediante formularios rea
     │   ├── cuenta.ts    # Configuración del formulario cuenta
     │   └── direccion.ts # Configuración del formulario dirección
     └── app.routes.ts    # Mapeo de rutas de la aplicación
+```
 ---
 ## ⚙️ Componentes y Servicios Implementados
 | Módulo / Servicio | Descripción / Responsabilidad |
