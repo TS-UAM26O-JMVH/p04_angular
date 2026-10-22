@@ -12,5 +12,18 @@
     "NOTIFICATIONS": "Notificaciones",
     "CHATBOT": "ChatBot",
     "PRIVACY_NOTICE": "Aviso de privacidad",
-    "LOGOUT": "Cerrar sesión"
+    "LOGOUT": "Cerrar sesión",
+    "PERSONAL": "Personal",
+    "ACCOUNT": "Cuenta",
+    "ADDRESS": "Dirección",
+    "PICTURE": "Fotografía",
+    "REG": "Registrar",
+    "SUBMIT": "Enviar",
+    "CONTINUE": "Continuar",
+    "NAME": "Nombre",
+    "LAST_NAME": "Primer apellido",
+    "SL": "Segundo apellido",
+    "DATEOFBIRTH": "Fecha de nacimiento",
+    "GENDER": "Género",
+    "NATIONALITY": "Nacionalidad"
 }
