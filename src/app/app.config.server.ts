@@ -1,12 +1,26 @@
-import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
-import { provideServerRendering, withRoutes } from '@angular/ssr';
-import { appConfig } from './app.config';
-import { serverRoutes } from './app.routes.server';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
-const serverConfig: ApplicationConfig = {
-  providers: [
-    provideServerRendering(withRoutes(serverRoutes))
-  ]
-};
+@Injectable({
+  providedIn: 'root',
+})
+export class ProgresoService {
+  private pasoActual = new BehaviorSubject<number>(0);
+  private pasosCompletados = new BehaviorSubject<{ [clave: number]: boolean }>({});
 
-export const config = mergeApplicationConfig(appConfig, serverConfig);
+  pasoActual$ = this.pasoActual.asObservable();
+  pasosCompletados$ = this.pasosCompletados.asObservable();
+
+  establecerPasoActual(paso: number) {
+    this.pasoActual.next(paso);
+  }
+
+  completarPaso(paso: number) {
+    const actuales = this.pasosCompletados.value;
+    this.pasosCompletados.next({ ...actuales, [paso]: true });
+  }
+
+  obtenerPasosCompletados() {
+    return this.pasosCompletados.value;
+  }
+}
